@@ -16,13 +16,12 @@ import Parentt from './chlParent';
 import Parent from './childParentColor';
 import Todo from './Todo';*/
 
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   
   //<React.StrictMode>
   <>
-    
-    
     <App />
 
     

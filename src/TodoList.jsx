@@ -1,11 +1,14 @@
 import { useEffect, useState } from "react";
 import NavBar from './nav';
+import { useTheme } from "./context/light";
+
+
 function TodoList(){
 
     const[text,setText]=useState("");
     const[toList,settoList]= useState([]);//pending list
     const[completedList,setcompletedList]= useState([]);//completed list
-
+    const color = useTheme();
     
     //load items from local storage
     useEffect(()=>{       
@@ -53,6 +56,7 @@ function TodoList(){
     return(
         <>  
             <NavBar/>
+            <h1>{color}</h1>
             <input type="text" name="" id="enter text here" value={text}  onChange={(e)=>setText(e.target.value)}/>
             {text}
             <button onClick={()=>Enterlist(text)}>click here</button>
